@@ -7,15 +7,19 @@ class Pipe {
     this.w = 80
     this.speed = 3
     this.highlight = false
+    this.icon = pipeSprite
+    this.passed = false
   }
 
   show () {
-    fill(255)
-    if (this.highlight) {
-      fill(255,0,0)
-    }
-    rect(this.x, 0, this.w, this.top)
-    rect(this.x, height-this.bottom, this.w, this.bottom)
+    // fill(255)
+    // if (this.highlight) {
+    //   fill(255,0,0)
+    // }
+    // rect(this.x, 0, this.w, this.top)
+    // rect(this.x, height-this.bottom, this.w, this.bottom)
+    image(this.icon, this.x, 0, this.w, this.top)
+    image(this.icon, this.x, height-this.bottom, this.w, this.bottom)
     
   }
 
@@ -34,6 +38,14 @@ class Pipe {
       return true
     }
     this.highlight = false  
+    return false
+  }
+
+  pass (bird) {
+    if (bird.x > this.x && !this.passed) {
+      this.passed = true
+      return true
+    }
     return false
   }
 

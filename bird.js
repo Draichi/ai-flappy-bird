@@ -21,6 +21,9 @@ class Bird {
     this.lift = -7
     this.score = 0
     this.fitness = 0
+    this.icon = birdSprite
+    this.width = 30
+    this.height = 30
     if (brain) {
       this.brain = brain.copy()
       this.brain.mutate(mutate);
@@ -37,9 +40,7 @@ class Bird {
   }
 
   show () {
-    stroke(255)
-    fill(255, 100)
-    ellipse(this.x, this.y, 25, 25)
+    image(this.icon, this.x - this.width / 2, this.y - this.height / 2, this.width, this.height)
   }
 
   up () {
