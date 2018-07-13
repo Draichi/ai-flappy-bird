@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>flappy-bird</title>
+		<title>flappy-bird</title>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
-	<script src="libraries/nn.js"></script>
-	<script src="libraries/matrix.js"></script>
-	<script src="sketch.js"></script>
-	<script src="genetic.js"></script>
-	<script src="bird.js"></script>
-	<script src="pipe.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+		<script src="libraries/nn.js"></script>
+		<script src="libraries/matrix.js"></script>
+		<script src="sketch.js"></script>
+		<script src="genetic.js"></script>
+		<script src="bird.js"></script>
+		<script src="pipe.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">Reinforcement Learning</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<a class="mdl-navigation__link" href="">Source</a>
+				</nav>
+				</div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Ai</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="">Source</a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+				<div class="page-content" id="page-content">
+					<h5>Train faster</h5>
+					<div class="container">
+						<span class="mdl-chip">
+							<span class="mdl-chip__text" id="chip">0</span>
+						</span>
+						<input class="mdl-slider mdl-js-slider" id="slider" type="range"
+						min="1" max="20" value="1" tabindex="0">
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
 	<style>
-		body {
-			margin:0;
-			padding:10px;
-			overflow: hidden;
+		.page-content {
+			text-align: center;
+			padding-bottom: 1vh;
 		}
-		canvas {
-			margin:auto;
+		.container {
+			padding: 0 20vw;
 		}
 	</style>
-</head>
-<body>
-</body>
 </html>

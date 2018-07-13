@@ -11,17 +11,23 @@ let birdSprite
 let bgImg
 var bgX = 0
 let parallax = 0.8
+var speedSlider
+var oi
 
 function preload () {
-	pipeSprite = loadImage('graphics/net1.jpg')
-	birdSprite = loadImage('graphics/bird1.gif')
-	bgImg = loadImage('graphics/bkgr.jpeg')
+	pipeSprite = loadImage('graphics/pipe2.jpeg')
+	birdSprite = loadImage('graphics/bird4.jpg')
+	bgImg = loadImage('graphics/bkgr2.jpg')
 }
 
 function setup () {
-	createCanvas(400, 480)
+	var oi = select('#chip')
+	var canvas = createCanvas(400, 480)
+	canvas.parent('page-content')
 	reset()
-	slider = createSlider(1, 100, 1)
+
+	slider = select('#slider');
+	// slider = createSlider(1, 100, 1)
 	for (let i=0; i<TOTAL; i++) {
 		birds[i] = new Bird()
 	}
@@ -100,10 +106,16 @@ function reset () {
 }
 
 function showScores () {
-	textSize(32);
-	text('score: ' + score, 1, 32);
-	text('record: ' + maxScore, 1, 64);
+	textSize(20);
+	text('score: ' + score, 1, 40);
+	fill(0, 255, 255, 255);
+	text('record: ' + maxScore, 1, 60);
+	text('generation: ' + generation, 1, 80);
+	text('birds: ' + birds.length, 1, 100);
 }
+
+
+oi.html(score)
 
 function keyPressed () {
 	if (key === 'S') {
