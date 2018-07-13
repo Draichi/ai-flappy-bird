@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<title>flappy-bird</title>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
@@ -20,7 +19,7 @@
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 	</head>
-	<body>
+	<body ontimeupdate="myFunction()">
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<header class="mdl-layout__header">
 				<div class="mdl-layout__header-row">
@@ -30,29 +29,30 @@
 				<div class="mdl-layout-spacer"></div>
 				<!-- Navigation. We hide it in small screens. -->
 				<nav class="mdl-navigation mdl-layout--large-screen-only">
-					<a class="mdl-navigation__link" href="">Source</a>
+					<a class="github-button" href="https://github.com/Draichi" data-show-count="true" aria-label="Follow @Draichi on GitHub">Follow @Draichi</a>
 				</nav>
 				</div>
 			</header>
 			<div class="mdl-layout__drawer">
 				<span class="mdl-layout-title">Ai</span>
 				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="">Source</a>
+					<a class="github-button" href="https://github.com/Draichi" data-show-count="true" aria-label="Follow @Draichi on GitHub">Follow @Draichi</a>
+					<a class="github-button" href="https://github.com/Draichi/ai-flappy-bird/fork" data-show-count="true" aria-label="Fork Draichi/ai-flappy-bird on GitHub">Fork</a>
+					<a class="github-button" href="https://github.com/Draichi/ai-flappy-bird" data-icon="octicon-star" data-show-count="true" aria-label="Star Draichi/ai-flappy-bird on GitHub">Star</a>
 				</nav>
 			</div>
 			<main class="mdl-layout__content">
 				<div class="page-content" id="page-content">
 					<h5>Train faster</h5>
 					<div class="container">
-						<span class="mdl-chip">
-							<span class="mdl-chip__text" id="chip">0</span>
-						</span>
 						<input class="mdl-slider mdl-js-slider" id="slider" type="range"
 						min="1" max="20" value="1" tabindex="0">
 					</div>
 				</div>
 			</main>
 		</div>
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</body>
 	<style>
 		.page-content {

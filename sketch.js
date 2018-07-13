@@ -12,16 +12,14 @@ let bgImg
 var bgX = 0
 let parallax = 0.8
 var speedSlider
-var oi
 
 function preload () {
-	pipeSprite = loadImage('graphics/pipe2.jpeg')
-	birdSprite = loadImage('graphics/bird4.jpg')
+	pipeSprite = loadImage('graphics/pipe.png')
+	birdSprite = loadImage('graphics/bird.png')
 	bgImg = loadImage('graphics/bkgr2.jpg')
 }
 
 function setup () {
-	var oi = select('#chip')
 	var canvas = createCanvas(400, 480)
 	canvas.parent('page-content')
 	reset()
@@ -107,15 +105,12 @@ function reset () {
 
 function showScores () {
 	textSize(20);
-	text('score: ' + score, 1, 40);
+	text('score: ' + score, 230, 40);
 	fill(0, 255, 255, 255);
-	text('record: ' + maxScore, 1, 60);
-	text('generation: ' + generation, 1, 80);
-	text('birds: ' + birds.length, 1, 100);
+	text('record: ' + maxScore, 230, 60);
+	text('generation: ' + generation, 230, 80);
+	text('birds: ' + birds.length, 230, 100);
 }
-
-
-oi.html(score)
 
 function keyPressed () {
 	if (key === 'S') {
