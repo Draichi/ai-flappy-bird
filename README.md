@@ -10,3 +10,8 @@ git clone
 cd ai-flappy-bird
 http-server
 ```
+
+### to-do
+
+- [x] work on mobile
+- [ ] tensorflow.js
