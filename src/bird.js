@@ -49,8 +49,6 @@ class Bird {
   }
 
   think(pipes) {
-
-    // find the closest pipe
     let closestPipe = null
     let closestPipeDistance = Infinity
     for (let i=0; i<pipes.length; i++) {

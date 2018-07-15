@@ -3,14 +3,14 @@ let birds      = []
 let savedBirds = []
 let pipes      = []
 let counter    = 0
-var score = 0
-var maxScore = 0
+var score      = 0
+var maxScore   = 0
+var bgX        = 0
+let parallax   = 0.8
 let slider
 let pipeSprite
 let birdSprite
 let bgImg
-var bgX = 0
-let parallax = 0.8
 var speedSlider
 
 function preload () {
@@ -25,7 +25,6 @@ function setup () {
 	reset()
 
 	slider = select('#slider');
-	// slider = createSlider(1, 100, 1)
 	for (let i=0; i<TOTAL; i++) {
 		birds[i] = new Bird()
 	}
@@ -83,10 +82,6 @@ function draw () {
 			pipes = []
 		}
 	}
-
-	// drawing stuff
-	
-
 	for (let bird of birds) {
 		bird.show()
 	}
