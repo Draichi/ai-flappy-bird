@@ -1,6 +1,6 @@
 # Reinforcement learning in Flappy Bird
 
-Genetic algorithm using the 'toy' library applaied to a custom flappy bird version built using p5.js
+Genetic algorithm using the 'toy' library applied to a custom flappy bird version built using p5.js
 
 ## Getting Started
 
@@ -35,4 +35,4 @@ http-server
 
 ## Credits
 
-- @shiffman
+This project was built on top of @shiffman 's project
