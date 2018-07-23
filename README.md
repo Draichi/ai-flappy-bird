@@ -6,6 +6,10 @@ Genetic algorithm using the 'toy' library applied to a custom flappy bird versio
 
 See [here](https://draichi.github.io/ai-flappy-bird/index.html) - the live demo
 
+<div style="text-align:center">
+<img src=screenshot.png height=300px>
+</div>
+
 or run locally:
 
 ```sh
